@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RUBY: Geo-Locations Referenzpunkten zuordnen</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Private Homepage von Peter Schuster aus Bottrop">
+    <link rel="canonical" href="http://www.peter-schuster.net/2013/04/22/georeferenzierung/">
+    
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+	<link type="image/png" href="/images/favicon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+	<script type="text/javascript">
+
+  		var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-28092137-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bd86105ebc1d22"></script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">Peter Schuster</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+      	<a class="page-link" href="/projekte/">Projekte & Tätigkeiten</a>
+      	<a class="page-link" href="/blog/">Blog</a>
+      	<a class="page-link" href="/kontakt/">Kontakt</a>
+      	<a class="page-link" href="/impressum/">Impressum</a>
+
+      	<!--
+        
+          <a class="page-link" href="/blog/">Blog</a>
+        
+          <a class="page-link" href="/feed.xml"></a>
+        
+          <a class="page-link" href="/impressum/">Impressum</a>
+        
+          <a class="page-link" href="/">Peter Schuster. Hands on Projektmanagement</a>
+        
+          <a class="page-link" href="/kontakt/">Kontakt</a>
+        
+          <a class="page-link" href="/projekte/">Projekte und Tätigkeiten</a>
+        
+      	-->
+      
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <p><a href=/blog/><< zur Übersicht</a>
+
+<div class="post">
+
+  <header class="post-header">
+    <h1>RUBY: Geo-Locations Referenzpunkten zuordnen</h1>
+    <!-- <p class="meta">Apr 22, 2013</p> -->
+  </header>
+
+  <article class="post-content">
+  <p>Das folgende Script sieht vor im zu untersuchenden Gebiet ein oder mehrere Referenzpunkte zu setzen und darum einen Radius in Metern zu schlagen. Diese Referenzpunkte werden in der ersten CSV-Datei hinterlegt. Die Radien dürfen sich dabei überschneiden. In einer zweiten CSV-Datei findet sich die Geo-Locations.</p>
+
+<p>Das Script kalkuliert anschließend die Distanz zwischen den Referenzpunkten und den Locations und vergleicht, ob die Location innerhalb der (pro Referenzpunkt individuell zu definierenden) Radien liegt. Dafür verwendet es eine Kalkulation nach Haversine wie in diesem Blogpost beschrieben: http://codingandweb.blogspot.de/2012/04/calculating-distance-between-two-points.html</p>
+
+<p>Falls eine Location in den Radien mehrerer Referenzpunkte liegt wird der am nächsten liegende Referenzpunkt als Empfehlung bestimmt. Die Ergebnisse werden im Terminal und gleichzeitig als CSV-Datei ausgegeben. Anhand dieser Angaben lassen sich Locations gruppieren und z.B. eine Location-basierte Abarbeitung planen.</p>
+
+<p>Datenfelder in der Locations-CSV</p>
+
+<pre><code>id (ID der Location)
+lat (Location Latitude in der Form 59.1234)
+long (Location Longitude in der Form 6.1234)
+name (Name der Location)
+</code></pre>
+
+<p>Datenfelder in der Referenzen-CSV</p>
+
+<pre><code>id (ID des Referenzpunkts)
+lat (Referenzpunkt Latitude)
+long (Referenzpunkt Longitude)
+radius (Gewünschter Radius um den Punkt im Meter)
+</code></pre>
+
+<p>Datenfelder in der Output-CSV</p>
+
+<pre><code>id (Location ID)
+name (Name der Location)
+lat (Location Latitude)
+long (Location Longitude)
+ref matches (Anzahl der Referenzpunkte, in deren Radius die Location liegt)
+ref recommendation (Referenzpunkt am nächsten zur Location)
+ref shortest distance (Distanz in Metern zu diesem Referenzpunkt)
+ref %id% (Liegt Location im Radius des Referenzpunktes %id% (true/false))
+ref %id% distance (Distanz in Metern der Location zum Referenzpunkt %id%)
+</code></pre>
+
+<div class="highlight"><pre><code class="ruby"><span class="c1">#!/usr/bin/ruby -w</span>
+<span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;fastercsv&#39;</span>
+<span class="c1"># Dateien über Kommandozeilenargumente definieren</span>
+<span class="n">reference_csv</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span> <span class="c1"># CSV-datei mit den Referenzpunkten (id;lat;long;radius)</span>
+<span class="n">locations_csv</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span> <span class="c1"># CSV-Datei mit den Locations () (id;lat;long)</span>
+<span class="n">output_csv</span> <span class="o">=</span> <span class="no">ARGV</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span> <span class="c1"># Gewünschter Name der Output-Datei</span>
+<span class="c1"># Mathematische Funktionen um Distanz zwischen zwei Punkten definieren zu können</span>
+<span class="c1"># http://codingandweb.blogspot.de/2012/04/calculating-distance-between-two-points.html</span>
+<span class="k">def</span> <span class="nf">power</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">pow</span><span class="p">)</span>
+  <span class="n">num</span> <span class="o">**</span> <span class="n">pow</span>
+<span class="k">end</span>
+<span class="k">def</span> <span class="nf">haversine</span><span class="p">(</span><span class="n">lat1</span><span class="p">,</span> <span class="n">long1</span><span class="p">,</span> <span class="n">lat2</span><span class="p">,</span> <span class="n">long2</span><span class="p">)</span>
+  <span class="n">dtor</span> <span class="o">=</span> <span class="no">Math</span><span class="o">::</span><span class="no">PI</span><span class="o">/</span><span class="mi">180</span>
+  <span class="n">r</span> <span class="o">=</span> <span class="mi">6378</span><span class="o">.</span><span class="mi">14</span><span class="o">*</span><span class="mi">1000</span>
+  <span class="n">rlat1</span> <span class="o">=</span> <span class="n">lat1</span> <span class="o">*</span> <span class="n">dtor</span> 
+  <span class="n">rlong1</span> <span class="o">=</span> <span class="n">long1</span> <span class="o">*</span> <span class="n">dtor</span> 
+  <span class="n">rlat2</span> <span class="o">=</span> <span class="n">lat2</span> <span class="o">*</span> <span class="n">dtor</span> 
+  <span class="n">rlong2</span> <span class="o">=</span> <span class="n">long2</span> <span class="o">*</span> <span class="n">dtor</span> 
+  <span class="n">dlon</span> <span class="o">=</span> <span class="n">rlong1</span> <span class="o">-</span> <span class="n">rlong2</span>
+  <span class="n">dlat</span> <span class="o">=</span> <span class="n">rlat1</span> <span class="o">-</span> <span class="n">rlat2</span>
+  <span class="n">a</span> <span class="o">=</span> <span class="n">power</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">dlat</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="no">Math</span><span class="o">::</span><span class="n">cos</span><span class="p">(</span><span class="n">rlat1</span><span class="p">)</span> <span class="o">*</span> <span class="no">Math</span><span class="o">::</span><span class="n">cos</span><span class="p">(</span><span class="n">rlat2</span><span class="p">)</span> <span class="o">*</span> <span class="n">power</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="n">sin</span><span class="p">(</span><span class="n">dlon</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+  <span class="n">c</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="no">Math</span><span class="o">::</span><span class="n">atan2</span><span class="p">(</span><span class="no">Math</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="no">Math</span><span class="o">::</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">a</span><span class="p">))</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">c</span>
+  <span class="k">return</span> <span class="n">d</span>
+<span class="k">end</span>
+<span class="c1"># Referenzpunkte in Array einlesen</span>
+<span class="n">references</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="n">reference_line_counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="no">FasterCSV</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">reference_csv</span><span class="p">,</span> <span class="ss">:quote_char</span> <span class="o">=&gt;</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="ss">:col_sep</span> <span class="o">=&gt;</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="ss">:row_sep</span> <span class="o">=&gt;</span><span class="ss">:auto</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="k">unless</span> <span class="n">reference_line_counter</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+    <span class="n">references</span><span class="o">.</span><span class="n">push</span> <span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">|</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">|</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="si">}</span><span class="s2">|</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">reference_line_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="p">(</span><span class="n">reference_line_counter</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> Referenzen eingelesen.&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+<span class="c1"># Locations einlesen und berechnen, ob sie innerhalb des definierten Radius der einzelnen Referenzpunkte liegen</span>
+<span class="n">location_line_counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">reference_to_check</span> <span class="o">=</span> <span class="o">[]</span>
+<span class="n">reference_result_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">reference_match_counter</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">reference_shortest_distance</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">reference_nearest_to_location</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="no">FasterCSV</span><span class="o">.</span><span class="n">foreach</span><span class="p">(</span><span class="n">locations_csv</span><span class="p">,</span> <span class="ss">:quote_char</span> <span class="o">=&gt;</span> <span class="s1">&#39;&quot;&#39;</span><span class="p">,</span> <span class="ss">:col_sep</span> <span class="o">=&gt;</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="ss">:row_sep</span> <span class="o">=&gt;</span><span class="ss">:auto</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">row</span><span class="o">|</span>
+  <span class="k">unless</span> <span class="n">location_line_counter</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+    <span class="n">location_id</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">location_lat</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">location_long</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">loctaion_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">row</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+    <span class="nb">puts</span> <span class="s2">&quot;=================== ===========================&quot;</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Prüfe </span><span class="si">#{</span><span class="n">location_id</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">location_name</span><span class="si">}</span><span class="s2">, Lat </span><span class="si">#{</span><span class="n">location_lat</span><span class="si">}</span><span class="s2">, Long </span><span class="si">#{</span><span class="n">location_long</span><span class="si">}</span><span class="s2">)&quot;</span>
+    <span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+    <span class="n">references</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">ref</span><span class="o">|</span>
+      <span class="n">ref_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">ref</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="n">reference_to_check</span> <span class="o">=</span> <span class="n">ref_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+      <span class="n">reference_to_check_id</span> <span class="o">=</span> <span class="n">reference_to_check</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+      <span class="n">reference_to_check_lat</span> <span class="o">=</span> <span class="n">reference_to_check</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+      <span class="n">reference_to_check_long</span> <span class="o">=</span> <span class="n">reference_to_check</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span>
+      <span class="n">reference_to_check_radius</span> <span class="o">=</span> <span class="n">reference_to_check</span><span class="o">[</span><span class="mi">3</span><span class="o">]</span>
+      <span class="nb">puts</span> <span class="s2">&quot;---------------------&quot;</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Referenzpunkt </span><span class="si">#{</span><span class="n">reference_to_check_id</span><span class="si">}</span><span class="s2">: Lat </span><span class="si">#{</span><span class="n">reference_to_check_lat</span><span class="si">}</span><span class="s2">, Long </span><span class="si">#{</span><span class="n">reference_to_check_long</span><span class="si">}</span><span class="s2">, Radius </span><span class="si">#{</span><span class="n">reference_to_check_radius</span><span class="si">}</span><span class="s2"> m&quot;</span>
+      <span class="n">distance</span> <span class="o">=</span> <span class="p">(</span><span class="n">haversine</span> <span class="p">(</span><span class="n">location_lat</span><span class="o">.</span><span class="n">to_f</span><span class="p">,</span> <span class="n">location_long</span><span class="o">.</span><span class="n">to_f</span><span class="p">,</span> <span class="n">reference_to_check_lat</span><span class="o">.</span><span class="n">to_f</span><span class="p">,</span> <span class="n">reference_to_check_long</span><span class="o">.</span><span class="n">to_f</span><span class="p">))</span><span class="o">.</span><span class="n">round</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Distanz zwischen Location und Referenzpunkt: </span><span class="si">#{</span><span class="n">distance</span><span class="si">}</span><span class="s2"> m&quot;</span>
+      <span class="k">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="n">reference_to_check_radius</span><span class="o">.</span><span class="n">to_f</span> <span class="k">then</span>
+        <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">location_id</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">location_name</span><span class="si">}</span><span class="s2">) in Radius von Referenzpunkt </span><span class="si">#{</span><span class="n">reference_to_check_id</span><span class="si">}</span><span class="s2">: true&quot;</span>
+        <span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+        <span class="n">reference_result_string</span> <span class="o">+=</span> <span class="s2">&quot;true;</span><span class="si">#{</span><span class="n">distance</span><span class="si">}</span><span class="s2">;&quot;</span>
+        <span class="k">if</span> <span class="n">reference_match_counter</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+          <span class="n">reference_shortest_distance</span> <span class="o">=</span> <span class="n">distance</span>
+          <span class="n">reference_nearest_to_location</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">reference_to_check_id</span><span class="si">}</span><span class="s2">&quot;</span>
+        <span class="k">else</span>
+          <span class="k">if</span> <span class="n">distance</span> <span class="o">&lt;</span> <span class="n">reference_shortest_distance</span> <span class="k">then</span>
+            <span class="n">reference_shortest_distance</span> <span class="o">=</span> <span class="n">distance</span>
+            <span class="n">reference_nearest_to_location</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">reference_to_check_id</span><span class="si">}</span><span class="s2">&quot;</span>
+          <span class="k">end</span> 
+        <span class="k">end</span>
+        <span class="n">reference_match_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="k">else</span>
+        <span class="nb">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">location_id</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">location_name</span><span class="si">}</span><span class="s2">) in Radius von Referenzpunkt </span><span class="si">#{</span><span class="n">reference_to_check_id</span><span class="si">}</span><span class="s2">: false&quot;</span>
+        <span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+        <span class="n">reference_result_string</span> <span class="o">+=</span> <span class="s2">&quot;false;</span><span class="si">#{</span><span class="n">distance</span><span class="si">}</span><span class="s2">;&quot;</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+    <span class="nb">puts</span> <span class="s2">&quot;Location liegt im Radius von </span><span class="si">#{</span><span class="n">reference_match_counter</span><span class="si">}</span><span class="s2"> Referenzpunkten&quot;</span>
+    <span class="k">unless</span> <span class="n">reference_match_counter</span> <span class="o">==</span> <span class="mi">0</span> <span class="k">then</span>
+      <span class="nb">puts</span> <span class="s2">&quot;Der am nächsten liegende Referenzpunkt ist </span><span class="si">#{</span><span class="n">reference_nearest_to_location</span><span class="si">}</span><span class="s2"> (</span><span class="si">#{</span><span class="n">reference_shortest_distance</span><span class="si">}</span><span class="s2"> m)&quot;</span>
+    <span class="k">end</span>
+    <span class="n">reference_result_string</span> <span class="o">=</span> <span class="n">reference_result_string</span><span class="o">.</span><span class="n">chop</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">output_csv</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+      <span class="n">f</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">location_id</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">location_name</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">location_lat</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">location_long</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">reference_match_counter</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">reference_nearest_to_location</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">reference_shortest_distance</span><span class="si">}</span><span class="s2">;</span><span class="si">#{</span><span class="n">reference_result_string</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+    <span class="n">reference_result_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">reference_match_counter</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">reference_nearest_to_location</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">reference_shortest_distance</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="k">else</span>
+    <span class="n">reference_id_header</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">references</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">ref</span><span class="o">|</span>
+      <span class="n">ref_string</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">ref</span><span class="si">}</span><span class="s2">&quot;</span>
+      <span class="n">reference_to_check</span> <span class="o">=</span> <span class="n">ref_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+      <span class="n">reference_to_check_id</span> <span class="o">=</span> <span class="n">reference_to_check</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+      <span class="n">reference_id_header</span> <span class="o">+=</span> <span class="s2">&quot;ref </span><span class="si">#{</span><span class="n">reference_to_check</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2">;ref </span><span class="si">#{</span><span class="n">reference_to_check</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="si">}</span><span class="s2"> distance;&quot;</span>
+    <span class="k">end</span>
+    <span class="n">reference_id_header</span> <span class="o">=</span> <span class="n">reference_id_header</span><span class="o">.</span><span class="n">chop</span>
+    <span class="nb">open</span><span class="p">(</span><span class="n">output_csv</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+      <span class="n">f</span><span class="o">.</span><span class="n">puts</span> <span class="s2">&quot;id;name;lat;long;ref matches;ref recommendation;ref shortest distance;</span><span class="si">#{</span><span class="n">reference_id_header</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">location_line_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;==================== =======================&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;==================== =======================&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot; &quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;Operation abgeschlossen. </span><span class="si">#{</span><span class="p">(</span><span class="n">location_line_counter</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span><span class="si">}</span><span class="s2"> Locations verarbeitet und Ergebnisse in </span><span class="si">#{</span><span class="n">output_csv</span><span class="si">}</span><span class="s2"> geschrieben.&quot;</span></code></pre></div>
+
+  </article>
+
+
+	<div class="addthis_native_toolbox"></div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'peter-schuster'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!--    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> -->
+    
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">Peter Schuster</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Peter Schuster</li>
+        <li><a href="mailto:kontakt@peter-schuster.net">kontakt@peter-schuster.net</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li><a href="https://www.xing.com/profile/Peter_Schuster54" target="_blank">Xing</a></li>
+        <li><a href="http://de.linkedin.com/pub/peter-schuster/22/188/690" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p>Letzter Blogpost:</p>
+
+        <p class="text">
+          <!-- <span class="text">8 Jul 2014</span> -->
+        <a class="post-link" href="/2014/07/08/jira-filter/">Erweiterte Vorgangsfilter mit Jira</a></p>
+		
+
+  </ul>
+    
+    
+    
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>

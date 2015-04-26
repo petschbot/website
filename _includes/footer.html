@@ -1,0 +1,37 @@
+<footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">{{ site.title }}</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>{{ site.title }}</li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li><a href="https://www.xing.com/profile/Peter_Schuster54" target="_blank">Xing</a></li>
+        <li><a href="http://de.linkedin.com/pub/peter-schuster/22/188/690" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p>Letzter Blogpost:</p>
+
+        <p class="text">
+          <!-- <span class="text">{{ site.posts.first.date | date: "%-d %b %Y" }}</span> -->
+        <a class="post-link" href="{{ site.posts.first.url | prepend: site.baseurl }}">{{ site.posts.first.title }}</a></p>
+		
+
+  </ul>
+    
+    
+    
+    </div>
+
+  </div>
+
+</footer>

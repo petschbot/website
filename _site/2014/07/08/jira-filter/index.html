@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Erweiterte Vorgangsfilter mit Jira</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Private Homepage von Peter Schuster aus Bottrop">
+    <link rel="canonical" href="http://www.peter-schuster.net/2014/07/08/jira-filter/">
+    
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+	<link type="image/png" href="/images/favicon.png">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+
+	<script type="text/javascript">
+
+  		var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-28092137-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53bd86105ebc1d22"></script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <a class="site-title" href="/">Peter Schuster</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+      	<a class="page-link" href="/projekte/">Projekte & Tätigkeiten</a>
+      	<a class="page-link" href="/blog/">Blog</a>
+      	<a class="page-link" href="/kontakt/">Kontakt</a>
+      	<a class="page-link" href="/impressum/">Impressum</a>
+
+      	<!--
+        
+          <a class="page-link" href="/blog/">Blog</a>
+        
+          <a class="page-link" href="/feed.xml"></a>
+        
+          <a class="page-link" href="/impressum/">Impressum</a>
+        
+          <a class="page-link" href="/">Peter Schuster. Hands on Projektmanagement</a>
+        
+          <a class="page-link" href="/kontakt/">Kontakt</a>
+        
+          <a class="page-link" href="/projekte/">Projekte und Tätigkeiten</a>
+        
+      	-->
+      
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <p><a href=/blog/><< zur Übersicht</a>
+
+<div class="post">
+
+  <header class="post-header">
+    <h1>Erweiterte Vorgangsfilter mit Jira</h1>
+    <!-- <p class="meta">Jul 8, 2014</p> -->
+  </header>
+
+  <article class="post-content">
+  <p>Ticketsysteme sind der Freund des Projektmanagers und Jira mit Sicherheit neben Redmine eine der am weitesten verbreiteten Lösungen. Ich mag an Jira die Möglichkeit Vorgangsfilter auf meine Bedürfnisse zuschneiden zu können ohne erst den Admin involvieren zu müssen. Für einfache Bedürfnisse bietet Jira die Möglichkeit Filter zusammenzuklicken. </p>
+
+<p><img src="/images/blog/jira1.png" alt="Jira Basisfilter" width="50%" height="50%" /></p>
+
+<p>Über den Link “Zu erweitert wechseln” erschließt sich eine mächtige <a href="https://docs.atlassian.com/jira/docs-052/Advanced+Searching" target="_blank">Abfragesyntax</a> welche es ermöglicht erheblich erweiterte Suchabfragen über die im System enthaltenen Tickets laufen zu lassen. </p>
+
+<p><img src="/images/blog/jira2.png" alt="Jira Erweiterte Filter" width="50%" height="50%" /></p>
+
+<p>Die Syntax erinnert an SQL Queries und ermöglicht es zum Beispiel, im Gegensatz zum Basismodus, auch Negationen als Suchparameter zu übergeben. </p>
+
+<div class="highlight"><pre><code class="sql"><span class="n">assignee</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span></code></pre></div>
+
+<p>Diese Abfrage zum Beispiel ermöglicht es mir alle Tickets anzeigen zu lassen, die mir zugewiesen und <strong>nicht</strong> geschlossen sind. Der Standardfilter “Meine offenen Vorgänge” unterschlägt nämlich Tickets im Status “Erledigt” (resolved) und ist für mich insofern unpraktikabel, als das meine Teammitarbeiter nach Erledigung das Ticket mir zuweisen damit ich das Ergebnis reviewen und das Ticket anschließend final schließen kann. </p>
+
+<p>Mit dem Button “Speichern unter” kann man die neue Abfrage unter einem neuen Filternamen speichern und so nicht nur im Issue Navigator (Vorgänge) im Schnellzugriff halten, sondern auch als Widget auf dem Startseiten-Dashboard einbinden.</p>
+
+<p>Ein weiterer für mich nützlicher Filter listet alle Tickets, welche</p>
+
+<ul>
+  <li>Entweder von mir erstellt und noch nicht erledigt wurden sowie auch nicht mir zugewiesen sind…</li>
+  <li>… oder bei denen ich zwar nicht Autor aber Beobachter bin und die nicht mir zugewiesen sowie offen sind.</li>
+</ul>
+
+<div class="highlight"><pre><code class="sql"><span class="p">(</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">Unresolved</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">())</span> <span class="k">OR</span> <span class="p">(</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">Unresolved</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">watcher</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">())</span></code></pre></div>
+
+<p>Dieser Filter residiert neben dem oben genannten prominent als “In Arbeit von mir” auf meinem Dashboard und dient mir zum schnellen Überblick darüber, welche meiner Tickets noch im Team in Bearbeitung sind.</p>
+
+<p>Mit diesen beiden Filtern kann man sich schonmal schnell einen Überblick über den Bearbeitungsstand in seinen Projekten verschaffen. Ist man wie ich im Multiprojektmanagement unterwegs kann es zudem Sinn machen bestimmte Projekt verschärft im Blick zu behalten. Dafür schränke ich die Filter auf einzelne Projekt ein, z.B. so</p>
+
+<div class="highlight"><pre><code class="sql"><span class="n">assignee</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span> <span class="k">AND</span> <span class="n">project</span> <span class="o">=</span> <span class="ss">&quot;Projektname&quot;</span></code></pre></div>
+
+<p>Zuletzt habe ich noch meine Kontrolliste über meine Tickets, die zwar erledigt aber nicht mir zum schließen zugeordnet wurden (wir arbeiten bei uns nicht mit diesbezüglichen automatischen Workflows)</p>
+
+<div class="highlight"><pre><code class="sql"><span class="n">resolution</span> <span class="o">=</span> <span class="n">Fixed</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span></code></pre></div>
+
+<p>Wie man sieht macht lohnt sich ein bisschen Anpassungsarbeit und spart im Projektcontrolling eine Menge Zeit.</p>
+
+
+  </article>
+
+
+	<div class="addthis_native_toolbox"></div>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'peter-schuster'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!--    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a> -->
+    
+
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">Peter Schuster</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Peter Schuster</li>
+        <li><a href="mailto:kontakt@peter-schuster.net">kontakt@peter-schuster.net</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li><a href="https://www.xing.com/profile/Peter_Schuster54" target="_blank">Xing</a></li>
+        <li><a href="http://de.linkedin.com/pub/peter-schuster/22/188/690" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p>Letzter Blogpost:</p>
+
+        <p class="text">
+          <!-- <span class="text">8 Jul 2014</span> -->
+        <a class="post-link" href="/2014/07/08/jira-filter/">Erweiterte Vorgangsfilter mit Jira</a></p>
+		
+
+  </ul>
+    
+    
+    
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>
