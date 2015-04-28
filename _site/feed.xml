@@ -7,6 +7,17 @@
     <atom:link href="http://www.peter-schuster.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Neue TWT Landigpage zu FirstSpirit</title>
+        <description>&lt;p&gt;Im Rahmen unserer aktuellen FirstSpirit Marketingkampagne haben wir eine neue Landipage erstellt, welche unser Projekt- und Produktleistungen zusammenfasst:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.twt.de/contentmanagementohnegrenzen.html&quot;&gt;TWT &amp;amp; FirstSpirit - Content Management ohne Grenzen&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Apr 2015 23:45:00 +0200</pubDate>
+        <link>http://www.peter-schuster.net/2015/04/28/twt-firstspirit/</link>
+        <guid isPermaLink="true">http://www.peter-schuster.net/2015/04/28/twt-firstspirit/</guid>
+      </item>
+    
+      <item>
         <title>Erweiterte Vorgangsfilter mit Jira</title>
         <description>&lt;p&gt;Ticketsysteme sind der Freund des Projektmanagers und Jira mit Sicherheit neben Redmine eine der am weitesten verbreiteten Lösungen. Ich mag an Jira die Möglichkeit Vorgangsfilter auf meine Bedürfnisse zuschneiden zu können ohne erst den Admin involvieren zu müssen. Für einfache Bedürfnisse bietet Jira die Möglichkeit Filter zusammenzuklicken. &lt;/p&gt;
 

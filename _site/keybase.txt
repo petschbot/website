@@ -1,0 +1,67 @@
+==================================================================
+https://keybase.io/petschbot
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.peter-schuster.net
+  * I am petschbot (https://keybase.io/petschbot) on keybase.
+  * I have a public key with fingerprint BD44 FA34 7D93 7D9E BBDD  0CBE B335 AE1F 3A1F 3496
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "bd44fa347d937d9ebbdd0cbeb335ae1f3a1f3496",
+            "host": "keybase.io",
+            "key_id": "b335ae1f3a1f3496",
+            "kid": "0101183a83a3d73499afb2e9a123a6f83ebe87aa51b7b57241a539e0f5c874a7765b0a",
+            "uid": "3a2940aaa07711ab7b5d64614ef4a219",
+            "username": "petschbot"
+        },
+        "service": {
+            "hostname": "www.peter-schuster.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1430082447,
+    "expire_in": 157680000,
+    "prev": "54c43442b9ccf16d50f2d7aca4cff808f6f889b4c996c69a2ae8eca86f9de624",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.8
+Comment: https://keybase.io/crypto
+
+yMIgAnicZZJbSBVBGICPlqV2MRBSFLqsUS923Mvs7ZBGJYVZBomWph1ndmePm7q7
+nrMeEzUyIggxH+xF7aWMCikpKrqjhRYiwhG1gqKT9JCSIYqlGGKzYk8NM8zt+7+Z
++ZneDatcsRF3J1tqxhrXlkQMvM6ucuWl5zbXUshUayhPLVWGlztNN3zYb/l1w6Y8
+FFIB0CAHRFXmSMMIqSqtIIw4joeY0ThIGpAFKpUqNQNOBNEgGMBu3SRrZOLVVcfz
+P1+2vEEzNMNIHCSVU0WyJUMNsViGDMtBQZM4jLAkQsgzSES8yAIG8pyMaY1XJBFA
+URR4REOiq1rWcZCVAQ0hpEWRYaATowpAYADWAGQZ2QED2G/ACkxoC9sBpRSZNlWf
+SpHloK5gJwfOU1aQ6upqN8GwfzchqwJk4DawTTSW37RNxSwnTKltWx5HYddYyzEY
+eVdsXqQbKskoCQhif0A3DcrDEFKxdUfPAI6mJRYAMZXCZy3dj726Q/CiINGkOMfg
+IFHyQAEcACySFUVjBJWnNVYVoQKBomkSLWkkVZKMgCLLgiLIkIVYwgqUBE1WscAC
+ynlfpWFSHkCuCX1EGdB9BrSr/Jiqf9NTtNoVEetaExXp/AlXbMymfz/l18NoV3tB
+xPGlpBrm6cXI+VvumSc3bj7bcj+gRbPnc+LuXB9fDDYu/fh9JqOttS4qsXtWb6nM
+vZbxIiw8vz0/PDTZkRVHhWxj85f9+TnlR6ZSFJ8WDA0l82mF9SgraX1eykT3hcT0
+n992hVv73w2Z8UfH926cTtveUPQoVLAuV3/59nLPq4WsmPej4Y+NdW2HrZL+wvxw
+fH7KVB/YttB/tanpgHUyNyehYazrc3C68Ni55tFPi51lzTua+D1XEpQHHw5Oz86d
+Gjyd3tkemrJ6R+YGB5KrK3dOan8O0aGJropG416WFe/NvnSib19s8fe2x7X5xZlf
+ZzJdWwdGhqf7WpiOitG/R2o1Cg==
+=QOu7
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/petschbot
+
+==================================================================
