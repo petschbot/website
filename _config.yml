@@ -1,0 +1,14 @@
+# Site settings
+title: Peter Schuster
+email: kontakt@peter-schuster.net
+description: "Private Homepage von Peter Schuster aus Bottrop"
+baseurl: ""
+url: "http://www.peter-schuster.net"
+
+# Build settings #
+markdown: kramdown
+permalink: pretty
+
+ftp_host: 'peter-schuster.net'
+ftp_dir: '/peter2'
+ftp_passive: false
