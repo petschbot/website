@@ -7,8 +7,23 @@
     <atom:link href="http://www.peter-schuster.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Neue TWT Landigpage zu FirstSpirit</title>
-        <description>&lt;p&gt;Im Rahmen unserer aktuellen FirstSpirit Marketingkampagne haben wir eine neue Landipage erstellt, welche unser Projekt- und Produktleistungen zusammenfasst:&lt;/p&gt;
+        <title>Inxmail Connect für FirstSpirit</title>
+        <description>&lt;p&gt;Ein neuer TWT Blogbeitrag behandelt das Modul Inxmail Connect für FirstSpirit, welches mein Team entwickelt hat. &lt;/p&gt;
+
+&lt;p&gt;Das Modul ermöglicht die redaktionelle Erstellung von Newslettern im FirstSpirit CMS im Zusammenspiel mit dem &lt;a href=&quot;http://www.inxmail.de&quot;&gt;Inxmail&lt;/a&gt; Newslettersystem. Dem Redakteur steht dabei nicht nur die gewohnte Arbeitsumgebung zur Verfügung, sondern insbesondere auch die im FirstSpirit verwalteten Media Assets.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.twt.de/news/detail/cms-und-e-mail-marketing-aus-einem-guss-mit-dem-twt-inxmail-connect-fuer-firstspirit.html&quot;&gt;CMS und E-Mail-Marketing aus einem Guss mit dem TWT Inxmail-Connect für FirstSpirit&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Modul im FirstSpirit Marketplace: &lt;a href=&quot;http://www.e-spirit.com/marketplace/de/inxmail-connect&quot;&gt;Inxmail Connect für FirstSpirit&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Tue, 02 Jun 2015 12:00:00 +0200</pubDate>
+        <link>http://www.peter-schuster.net/2015/06/02/twt-inxmailConnect/</link>
+        <guid isPermaLink="true">http://www.peter-schuster.net/2015/06/02/twt-inxmailConnect/</guid>
+      </item>
+    
+      <item>
+        <title>Neue TWT Landingpage zu FirstSpirit</title>
+        <description>&lt;p&gt;Im Rahmen unserer aktuellen FirstSpirit Marketingkampagne haben wir eine neue Landingpage erstellt, welche unser Projekt- und Produktleistungen zusammenfasst:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.twt.de/contentmanagementohnegrenzen.html&quot;&gt;TWT &amp;amp; FirstSpirit - Content Management ohne Grenzen&lt;/a&gt;&lt;/p&gt;
 </description>
