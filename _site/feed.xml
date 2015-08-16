@@ -7,26 +7,6 @@
     <atom:link href="http://www.peter-schuster.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Fachartikel: TYPO3 im Konzerneinsatz</title>
-        <description>&lt;p&gt;In der aktuellen Augustausgabe 5.15 des “Entwickler Magazin” findet sich ein Fachartikel von mir. Unter dem Titel “…” gehe ich auf die grundsätzlichen Erwägungen und die Vor- und Nachteile des Einsatzes von TYPO3 im Konzernumfeld ein.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 15 Aug 2015 12:00:00 +0200</pubDate>
-        <link>http://www.peter-schuster.net/2015/08/15/2015-08-15-FachartikelTypo3/</link>
-        <guid isPermaLink="true">http://www.peter-schuster.net/2015/08/15/2015-08-15-FachartikelTypo3/</guid>
-      </item>
-    
-      <item>
-        <title>FirstSpirit Casestudy DKV Euroservice</title>
-        <description>&lt;p&gt;Der Relaunch meines Kunden &lt;a href=&quot;https://www.dkv-euroservice.com&quot;&gt;DKV Euroservice&lt;/a&gt; auf Basis von &lt;a href=&quot;http://www.e-spirit.com/de/&quot;&gt;FirstSpirit 5.1&lt;/a&gt; und &lt;a href=&quot;http://www.liferay.com&quot;&gt;Liferay 6.2&lt;/a&gt; ist ein schönes Referenzprojekt. Es umfasst nicht nur ein modernes, responsives Design im Frontend sondern auch eine zielgruppenoptimierte Informationsarchitektur und eine funktionsorientierte Konnektion von FirstSpirit und Liferay. Einen Überblick über dieses Projekt bietet nun neben einem Slideshare-Foliensatz auch eine kurze Casestudy.&lt;/p&gt;
-
-&lt;p&gt;&lt;iframe src=&quot;//de.slideshare.net/slideshow/embed_code/key/3eFj1ltqujxTOL&quot; width=&quot;425&quot; height=&quot;355&quot; frameborder=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; scrolling=&quot;no&quot; style=&quot;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&quot; allowfullscreen=&quot;&quot;&gt; &lt;/iframe&gt; &lt;div style=&quot;margin-bottom:5px&quot;&gt; &lt;strong&gt; &lt;a href=&quot;//de.slideshare.net/TWTinteractive/dkv-euroservice-setzt-auf-twt-kompetenz&quot; title=&quot;DKV Euroservice setzt auf TWT Kompetenz&quot; target=&quot;_blank&quot;&gt;DKV Euroservice setzt auf TWT Kompetenz&lt;/a&gt; &lt;/strong&gt; from &lt;strong&gt;&lt;a href=&quot;//www.slideshare.net/TWTinteractive&quot; target=&quot;_blank&quot;&gt;TWT Interactive&lt;/a&gt;&lt;/strong&gt; &lt;/div&gt;&lt;/p&gt;
-</description>
-        <pubDate>Wed, 15 Jul 2015 12:00:00 +0200</pubDate>
-        <link>http://www.peter-schuster.net/2015/07/15/2015-06-02-twt-inxmailConnect/</link>
-        <guid isPermaLink="true">http://www.peter-schuster.net/2015/07/15/2015-06-02-twt-inxmailConnect/</guid>
-      </item>
-    
-      <item>
         <title>Inxmail Connect für FirstSpirit</title>
         <description>&lt;p&gt;Ein neuer TWT Blogbeitrag behandelt das Modul Inxmail Connect für FirstSpirit, welches mein Team entwickelt hat. &lt;/p&gt;
 
