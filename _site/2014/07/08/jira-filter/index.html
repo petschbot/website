@@ -96,7 +96,11 @@
 
   <header class="post-header">
     <h1>Erweiterte Vorgangsfilter mit Jira</h1>
-    <p class="meta">Jul 8, 2014</p>
+    <p class="meta">
+          8.
+          Juli
+            
+          2014</p>
   </header>
 
   <article class="post-content">
@@ -110,7 +114,7 @@
 
 <p>Die Syntax erinnert an SQL Queries und ermöglicht es zum Beispiel, im Gegensatz zum Basismodus, auch Negationen als Suchparameter zu übergeben. </p>
 
-<div class="highlight"><pre><code class="sql"><span class="n">assignee</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span></code></pre></div>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">assignee</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span></code></pre></div>
 
 <p>Diese Abfrage zum Beispiel ermöglicht es mir alle Tickets anzeigen zu lassen, die mir zugewiesen und <strong>nicht</strong> geschlossen sind. Der Standardfilter “Meine offenen Vorgänge” unterschlägt nämlich Tickets im Status “Erledigt” (resolved) und ist für mich insofern unpraktikabel, als das meine Teammitarbeiter nach Erledigung das Ticket mir zuweisen damit ich das Ergebnis reviewen und das Ticket anschließend final schließen kann. </p>
 
@@ -123,22 +127,25 @@
   <li>… oder bei denen ich zwar nicht Autor aber Beobachter bin und die nicht mir zugewiesen sowie offen sind.</li>
 </ul>
 
-<div class="highlight"><pre><code class="sql"><span class="p">(</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">Unresolved</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">())</span> <span class="k">OR</span> <span class="p">(</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">Unresolved</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">watcher</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">())</span></code></pre></div>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="p">(</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">Unresolved</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">())</span> <span class="k">OR</span> <span class="p">(</span><span class="n">resolution</span> <span class="o">=</span> <span class="n">Unresolved</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">watcher</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">())</span></code></pre></div>
 
 <p>Dieser Filter residiert neben dem oben genannten prominent als “In Arbeit von mir” auf meinem Dashboard und dient mir zum schnellen Überblick darüber, welche meiner Tickets noch im Team in Bearbeitung sind.</p>
 
 <p>Mit diesen beiden Filtern kann man sich schonmal schnell einen Überblick über den Bearbeitungsstand in seinen Projekten verschaffen. Ist man wie ich im Multiprojektmanagement unterwegs kann es zudem Sinn machen bestimmte Projekt verschärft im Blick zu behalten. Dafür schränke ich die Filter auf einzelne Projekt ein, z.B. so</p>
 
-<div class="highlight"><pre><code class="sql"><span class="n">assignee</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span> <span class="k">AND</span> <span class="n">project</span> <span class="o">=</span> <span class="ss">&quot;Projektname&quot;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">assignee</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span> <span class="k">AND</span> <span class="n">project</span> <span class="o">=</span> <span class="ss">&quot;Projektname&quot;</span></code></pre></div>
 
 <p>Zuletzt habe ich noch meine Kontrolliste über meine Tickets, die zwar erledigt aber nicht mir zum schließen zugeordnet wurden (wir arbeiten bei uns nicht mit diesbezüglichen automatischen Workflows)</p>
 
-<div class="highlight"><pre><code class="sql"><span class="n">resolution</span> <span class="o">=</span> <span class="n">Fixed</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span></code></pre></div>
+<div class="highlight"><pre><code class="language-sql" data-lang="sql"><span class="n">resolution</span> <span class="o">=</span> <span class="n">Fixed</span> <span class="k">AND</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">Closed</span> <span class="k">AND</span> <span class="n">reporter</span> <span class="o">=</span> <span class="n">currentUser</span><span class="p">()</span> <span class="k">AND</span> <span class="n">assignee</span> <span class="o">!=</span> <span class="n">currentUser</span><span class="p">()</span></code></pre></div>
 
 <p>Wie man sieht macht lohnt sich ein bisschen Anpassungsarbeit und spart im Projektcontrolling eine Menge Zeit.</p>
 
 
   </article>
+
+  <p><i>Haben Sie weitergehende Fragen? <a href="/kontakt/">Kontaktieren</a> Sie mich gerne...</i></p>
+  <p>&nbsp;</p>
 
 
 	<div class="addthis_native_toolbox"></div>
@@ -205,8 +212,8 @@
       <p>Letzter Blogpost:</p>
 
         <p class="text">
-          <!-- <span class="text">2 Jun 2015</span> -->
-        <a class="post-link" href="/2015/06/02/twt-inxmailConnect/">Inxmail Connect für FirstSpirit</a></p>
+          <!-- <span class="text">7 Oct 2015</span> -->
+        <a class="post-link" href="/2015/10/07/Liferay-Digitale-Transformation/">Liferay als Plattform für Digitale Transformation</a></p>
 		
 
   </ul>
