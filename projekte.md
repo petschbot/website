@@ -25,7 +25,7 @@ permalink: /projekte/
     </ul></p>
     <li>Projektleitung Umsetzung & Entwicklung</li>
     <ul>
-    	<li>Projektplanung (MS-Project, OpenProj)</li>
+    	<li>Projektplanung (MS-Project, OmniPlan, OpenProj)</li>
     	<li>Projektlenkung</li>
     	<li>Projektcontrolling und Berichtswesen</li>
     	<li>Faktura</li>
