@@ -10,4 +10,8 @@ Ich habe in jüngster Zeit gute Erfahrungen mit dem Portalsystem [Liferay](https
 
 Liferay unterstützt ein solches Vorgehen durch seine gute Skalierbarkeit und eine exzellente Grundausstattung an modular aufgebauten Standardfunktionalitäten in Form von programmatisch frei anpassbaren Portlets. Es lässt sich damit und über eine Vielzahl  von Schnittstellen auch relativ einfach in bestehende IT-Landschaften in Gestalt von ERP, PMS oder CRM-Applikationen integrieren. Das Lizenzmodell dieses OpenSource Portalsystems setzt deshalb in der - für geschäftskritische Anwendung ratsamen - Enterprise Edition auf eine [Support Subscription](https://www.liferay.com/de/products/liferay-portal/ee/overview){:target="_blank"} mit dem Hersteller Liferay International Inc. Ich selber halte Liferay für ein sehr leistungsfähiges Produkt und stehe laut der Einordnung von [Gartner](https://www.liferay.com/de/about-us/awards/gartnermq-portals){:target="_blank"} damit wohl auch nicht ganz allein. Ich hoffe in den folgenden Beiträgen Inspirationen für den kreativen wie nützlichen Einsatz liefern zu können.
 
+Bisher sind folgende Beiträge erschienen:
+
+* [Liferay als Dokumenten-Extranet]({% post_url 2015-10-08-Liferay-Dokumenten-Extranet %})
+
 
