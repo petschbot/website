@@ -22,7 +22,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/blog/doc_lib2.png&quot; alt=&quot;Liferay Document Library Portlet Document Categories&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In der Dokumentenablage ist es möglich, jenseits einer frei strukturierbaren Ordnerhierachie verschiedene Dokumentenkategorien zu definieren, zum Beispiel “Angebote” oder “Forecast”. Zusammen mit der sehr leistungsfähigen &lt;a href=&quot;https://www.liferay.com/de/documentation/liferay-portal/6.2/user-guide/-/ai/searching-for-content-in-liferay-liferay-portal-6-2-user-guide-06--3&quot; target=&quot;_blank&quot;&gt;Suchfunktion&lt;/a&gt;, welche auch Dokumenteninhalte indexiert, ergibt sich auch in sehr großen Dokumentensammlungen eine optimale Wiederauffindbarkeit von einzelnen Dokumenten. &lt;/p&gt;
+&lt;p&gt;In der Dokumentenablage ist es möglich, jenseits einer frei strukturierbaren Ordnerhierarchie verschiedene Dokumentenkategorien zu definieren, zum Beispiel “Angebote” oder “Forecast”. Zusammen mit der sehr leistungsfähigen &lt;a href=&quot;https://www.liferay.com/de/documentation/liferay-portal/6.2/user-guide/-/ai/searching-for-content-in-liferay-liferay-portal-6-2-user-guide-06--3&quot; target=&quot;_blank&quot;&gt;Suchfunktion&lt;/a&gt;, welche auch Dokumenteninhalte indexiert, ergibt sich auch in sehr großen Dokumentensammlungen eine optimale Wiederauffindbarkeit von einzelnen Dokumenten. &lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/blog/doc_lib3.png&quot; alt=&quot;Liferay Document Library Portlet Document Download&quot; width=&quot;40%&quot; /&gt;&lt;/p&gt;
 
@@ -32,7 +32,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/blog/doc_lib4.png&quot; alt=&quot;Liferay Document Library Portlet Document Versions&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Die Möglichkeit zur Versionierung einzelner Dokumente beendet das Chaos der Versionsverwaltung über Dateinamen ala Konzept_V1.2_Final_Endgültig_Freigabe2_PS.docx. Für jedes Dokument kann eine neue Version hochgeladen werden, zugleich bietet Liferay die vergangenen Versionen in der Versions-Historie zum Download an. Dabei unterstützt Liferay auch aus Dokumenten Management Systemen bekannte Funktionen wie Check-In und Check-Out-Prozesse um Dokumente zur Überarbeitung zu sperren sowie damit verbundene Dokumentenstati (Entwurf, Final). Verbunden mit einem frei definierbaren Rollenkonzept und anpassbaren Workflows lassen sich so auch mehrstufige Freigabeszenarien direkt im Portal realisieren.&lt;/p&gt;
+&lt;p&gt;Die Möglichkeit zur Versionierung einzelner Dokumente beendet das Chaos der Versionsverwaltung über Dateinamen ala Konzept_V1.2_Final_Freigabe2.docx. Für jedes Dokument kann eine neue Version hochgeladen werden, zugleich bietet Liferay die vergangenen Versionen in der Versions-Historie zum Download an. Dabei unterstützt Liferay auch aus Dokumenten Management Systemen bekannte Funktionen wie Check-In und Check-Out-Prozesse um Dokumente zur Überarbeitung zu sperren sowie damit verbundene Dokumentenstati (Entwurf, Final). In Kombination mit einem frei definierbaren Rollenkonzept und anpassbaren Workflows lassen sich so auch mehrstufige Freigabeszenarien direkt im Portal realisieren.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/blog/doc_lib5a.png&quot; alt=&quot;Liferay Document Library Portlet WebDAV&quot; width=&quot;75%&quot; /&gt;&lt;/p&gt;
 
