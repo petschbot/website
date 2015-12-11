@@ -23,7 +23,7 @@ permalink: /projekte/
     	<li>Aufwandsschätzung und Angebotserstellung</li>
     	<li>Grobkonzeption und technische Feinkonzeption (inkl. Datenmodellierung)</li>
     </ul></p>
-    <li>Projektleitung Umsetzung & Entwicklung</li>
+    <li>Klassische und agile Projektleitung</li>
     <ul>
     	<li>Projektplanung (MS-Project, OmniPlan, OpenProj)</li>
     	<li>Projektlenkung</li>
@@ -42,7 +42,14 @@ permalink: /projekte/
         <li><a href="http://www.e-spirit.com/marketplace/de/xml-sitemap-generator" target="_blank">TWT XML Sitemap Generator für FirstSpirit</a></li>
         <li><a href="http://www.e-spirit.com/marketplace/de/inxmail-connect" target="_blank">TWT Inxmail Connect für FirstSpirit</a></li>
       </ul>
-    <li>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="http://www.e-spirit.com" target="_blank">e-Spirit AG</a></li>
+  </ul>
+
+  <h3>Partnermanagement</h3>
+  <ul>
+    <li><a href="http://www.e-spirit.com/de/partner/twt-interactive.html" target="_blank">FirstSpirit Preferred Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="http://www.e-spirit.com" target="_blank">e-Spirit AG</a></li>
+    <li><a href="https://www.liferay.com/de/partners/service-partners" target="_blank">Liferay Silver Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="https://www.liferay.com/de/" target="_blank">Liferay Deutschland GmbH</a></li>
+    <li>Opportunity- und Leadmanagement</li>
+    <li>Zertifizierungskoordination</li>
   </ul>
   
   <hr>
