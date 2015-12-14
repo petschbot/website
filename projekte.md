@@ -47,7 +47,7 @@ permalink: /projekte/
   <h3>Partnermanagement</h3>
   <ul>
     <li><a href="http://www.e-spirit.com/de/partner/twt-interactive.html" target="_blank">FirstSpirit Preferred Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="http://www.e-spirit.com" target="_blank">e-Spirit AG</a></li>
-    <li><a href="https://www.liferay.com/de/partners/service-partners" target="_blank">Liferay Silver Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="https://www.liferay.com/de/" target="_blank">Liferay Deutschland GmbH</a></li>
+    <li><a href="https://www.liferay.com/de/partners/service-partners" target="_blank">Liferay Silver Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="https://www.liferay.com/de/" target="_blank">Liferay Inc.</a></li>
     <li>Opportunity- und Leadmanagement</li>
     <li>Zertifizierungskoordination</li>
   </ul>
@@ -91,7 +91,7 @@ permalink: /projekte/
   <p>Leistungen und Tätigkeiten:</p>
   <ul>
     <li>Evaluation zur zukünftigen Optimierung der Kommunikationsprozesse und Ressourcenverwendung</li>
-    <li>Moderation des Reviewprozesses</li>
     <li>Statistische Wahlanalyse</li>
     <li><a href="http://de.wikipedia.org/wiki/SWOT-Analyse" target="_blank">SWOT-Analyse</a></li>
+    <li>Leitung von Review-Workshops</li>
   </ul>

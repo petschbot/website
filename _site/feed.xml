@@ -7,6 +7,17 @@
     <atom:link href="http://www.peter-schuster.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Fachartikel: TYPO3 im Konzerneinsatz</title>
+        <description>&lt;p&gt;In der Novemberausgabe 1.16 des PHP Magazins findet sich ein Fachartikel von mir. Unter dem Titel “Enterprise: TYPO3 im Konzerneinsatz. Vorteile von TYPO3 für Unternehmen und Organisationen” gehe ich auf die grundsätzlichen Erwägungen und die Vor- und Nachteile des Einsatzes von TYPO3 im Konzernumfeld ein.&lt;/p&gt;
+
+&lt;p&gt;Das Heft kann hier bestellt werden: &lt;a href=&quot;https://entwickler.de/php-magazin/php-magazin-1-16-135515.html&quot; target=&quot;_blank&quot;&gt;PHP Magazin  1.16&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 14 Dec 2015 11:00:00 +0100</pubDate>
+        <link>http://www.peter-schuster.net/2015/12/14/FachartikelTypo3/</link>
+        <guid isPermaLink="true">http://www.peter-schuster.net/2015/12/14/FachartikelTypo3/</guid>
+      </item>
+    
+      <item>
         <title>Liferay als Dokumenten-Extranet</title>
         <description>&lt;p&gt;Viele Geschäftsprozesse sind auch im Jahre 2015 dokumentenzentriert. Eine eher transaktionale Abbildung im Web ist ein löbliches Endziel, am Startpunkt eines Digitalen Transformationsprozesses steht aber der häufige Leidensdruck des Dokumentenaustauschs des Unternehmens mit seinen B2B-Kunden. &lt;/p&gt;
 
