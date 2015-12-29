@@ -6,9 +6,10 @@ permalink: /impressum/
 
 ##Herausgeber
 
-Peter Schuster  
-Rhaland 25  
-46242 Bottrop  
+Peter Schuster, 
+Bottrop 
+
+Meine vollständige Postadresse erhalten Sie auf Anfrage <a href="mailto:kontakt@peter-schuster.net">kontakt@peter-schuster.net</a>
 
 <p>Dies ist meine private Webseite und bildet meine Privatmeinung ab. Weder soll sie vertrieblichen oder werblichen Aspekten dienen noch spiegelen die Inhalte zwangsläufig die Meinung meines <a href="/projekte/">Arbeitgebers</a>, der <a href="http://www.twt.de" target="_blank">TWT Interactive GmbH</a>, wieder. Ich biete aus diesem Grund auch keine Dienstleistungen über diese Seite an oder verfolge sonstige gewerbliche Ziele, sie dient einzig dem interessierten fachlichen Austausch. Insofern freue ich mich stets über <a href="/kontakt/">Feedback</a>: Teilen Sie meine Erfahrungen, oder kommen Sie zu anderen Ergebnissen? Haben Ihnen einzelne meiner Beiträge in Ihren Projekten weiter helfen können?</p>
 
