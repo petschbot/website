@@ -4,7 +4,7 @@ title:  "Erweiterte Vorgangsfilter mit Jira"
 date:   2014-07-08 21:45:00
 ---
 
-Ticketsysteme sind der Freund des Projektmanagers und Jira mit Sicherheit neben Redmine eine der am weitesten verbreiteten Lösungen. Ich mag an Jira die Möglichkeit Vorgangsfilter auf meine Bedürfnisse zuschneiden zu können ohne erst den Admin involvieren zu müssen. Für einfache Bedürfnisse bietet Jira die Möglichkeit Filter zusammenzuklicken. 
+Ticketsysteme sind der Freund des Projektmanagers und [Jira](https://de.atlassian.com/software/jira){:target="_blank"} des Herstellers [Atlassian](https://de.atlassian.com){:target="_blank"} mit Sicherheit neben Redmine eine der am weitesten verbreiteten Lösungen. Ich mag an Jira die Möglichkeit Vorgangsfilter auf meine Bedürfnisse zuschneiden zu können ohne erst den Admin involvieren zu müssen. Für einfache Bedürfnisse bietet Jira die Möglichkeit Filter zusammenzuklicken. 
 
 ![Jira Basisfilter](/images/blog/jira1.png){:width="50%" height="50%" }
 
