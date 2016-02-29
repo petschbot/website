@@ -4,7 +4,8 @@ title: Projekte und Tätigkeiten
 permalink: /projekte/
 ---
 
-  <h2><p><font color="#818181">[2013 - Heute]</font></p>Projektmanager bei der TWT Interactive GmbH in Düsseldorf</h2>
+  <h2><p><font color="#818181">[2016 - Heute]</font></p>Teammanager Enterprise CMS bei der TWT Interactive GmbH in Düsseldorf</h2>
+  <h2><p><font color="#818181">[2013 - 2016]</font></p>Projektmanager bei der TWT Interactive GmbH in Düsseldorf</h2>
   <p><a href="http://www.twt.de" target="_blank"><img src="/images/twt_logo.png" height="48"></a></p>
   <h3>Projektmanagement</h3>
   <ul>
