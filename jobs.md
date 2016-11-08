@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projekte und Tätigkeiten
-permalink: /projekte/
+permalink: /jobs/
 ---
 
   <h2><p><font color="#818181">[2016 - Heute]</font></p>Teammanager Enterprise CMS bei der TWT Interactive GmbH in Düsseldorf</h2>

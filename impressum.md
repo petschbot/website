@@ -12,6 +12,8 @@ Bottrop
 
 Meine vollständige Postadresse erhalten Sie auf Anfrage <a href="mailto:kontakt@peter-schuster.net">kontakt@peter-schuster.net</a>
 
+##Rechtliche Hinweise
+
 {% include disclaimer.html %}
 
 ##Haftungsausschluss (Disclaimer)
