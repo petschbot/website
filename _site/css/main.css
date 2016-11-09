@@ -438,4 +438,10 @@ a:visited { color: #205caa; }
     width: auto;
     margin: 0 0 15px; }
 
+  .post-content .column{
+    float: none;
+    clear: both;
+    width: auto;
+    margin: 0 0 15px; }
+
 }
