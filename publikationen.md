@@ -6,10 +6,9 @@ permalink: /publikationen/
 
 ##2016
 
-###Aftermarket im Zeitalter der Digitalen Transformation
+###Service-Ökosystem für den Aftermarket aufbauen: Kundenbindung im B2B
 
-[Contentmanager.de](http://www.contentmanager.de/cms/e-commerce/aftermarket-im-zeitalter-der-digitalen-transformation/){:target="_blank"} <br>
-[ibusiness.de](http://www.ibusiness.de/marketing/db/590271veg.html){:target="_blank"}
+[iBusiness ExecutiveSummary, Jahrgang 26, Ausgabe 21, Oktober 2016](http://www.ibusiness.de/marketing/db/590271veg.html){:target="_blank"}
 
 
 ##2015
