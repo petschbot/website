@@ -5,12 +5,9 @@ permalink: /blog/
 
 ---
 
-<div class="home">
 
-  <ul class="posts">
     {% for post in site.posts %}
-      <li>
-        <span class="post-date">
+        <b><span class="post-date">
           {% assign m = post.date | date: "%-m" %}
           {{ post.date | date: "%-d." }}
           {% case m %}
@@ -28,15 +25,12 @@ permalink: /blog/
             {% when '12' %}Dezember
           {% endcase %}
           {{ post.date | date: "%Y" }}
-        </span>
+        </span></b><br>
 
 
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
       	 {{ post.excerpt }}
-      </li>
     {% endfor %}
-  </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
