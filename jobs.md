@@ -34,7 +34,7 @@ permalink: /jobs/
 
   <h3>Partnermanagement</h3>
   <ul>
-    <li><a href="http://www.e-spirit.com/de/partner/twt-interactive.html" target="_blank">FirstSpirit Preferred Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="http://www.e-spirit.com" target="_blank">e-Spirit AG</a></li>
+    <li><a href="http://www.e-spirit.com/de/partner/twt-interactive.html" target="_blank">FirstSpirit Advanced Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="http://www.e-spirit.com" target="_blank">e-Spirit AG</a></li>
     <li>Opportunity- und Leadmanagement</li>
     <li>Zertifizierungskoordination</li>
   </ul>
