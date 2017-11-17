@@ -34,7 +34,10 @@ permalink: /jobs/
 
   <h3>Partnermanagement</h3>
   <ul>
-    <li><a href="http://www.e-spirit.com/de/partner/twt-interactive.html" target="_blank">FirstSpirit Advanced Partner</a><br/>Pflege und Entwicklung der strategischen Partnerschaft zur <a href="http://www.e-spirit.com" target="_blank">e-Spirit AG</a></li>
+    <li><a href="https://www.e-spirit.com/de/partner/partner-finden/implementierungspartner/data_twt_de" target="_blank">FirstSpirit Advanced Partner</a></li>
+    <li><a href="https://solutionpartners.adobe.com/fragments/partners/a1X14000008lstNEAQ.html" target="_blank">Adobe Community Partner</a></li>
+    <br/>
+    <li>Pflege und Entwicklung der strategischen Partnerschaften</li>
     <li>Opportunity- und Leadmanagement</li>
     <li>Zertifizierungskoordination</li>
   </ul>
