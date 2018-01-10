@@ -4,11 +4,11 @@ title: Tätigkeiten
 permalink: /jobs/
 ---
 
-  <h2><p><font color="#818181">[2016 - Heute]</font></p>Teammanager Enterprise CMS bei der TWT Interactive GmbH in Düsseldorf</h2>
+  <h2><p><font color="#818181">[2016 - Heute]</font></p>Teammanager Custom Development bei der TWT Interactive GmbH in Düsseldorf</h2>
   <p><a href="http://www.twt.de" target="_blank"><img src="/images/twt_logo.png" height="48"></a></p>
 
   <ul>
-    <li>Personalführung und strategische Entwicklung des Teams Enterprise Content Management Systeme im Geschäftsbereich Experience Platforms</li>
+    <li>Personalführung und strategische Entwicklung des Teams Custom Development</li>
     <li>IT Consulting</li>
       <ul>
         <li>Strategie Workshops (Deutsch und Englisch)</li>
@@ -16,6 +16,7 @@ permalink: /jobs/
         <li>Bestandsanalyse und Migrationsberatung</li>
         <li>Stakeholder (Online-) Surveys</li>
         <li>Aufwandsschätzung</li>
+        <li>Software Konzeption und Architektur</li>
         <li>Technische Feinkonzeption</li>
       </ul>
     <li>Technisches Projektmanagement</li>
