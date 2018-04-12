@@ -16,10 +16,16 @@ permalink: /jobs/
         <li>Bestandsanalyse und Migrationsberatung</li>
         <li>Stakeholder (Online-) Surveys</li>
         <li>Aufwandsschätzung</li>
-        <li>Software Konzeption und Architektur</li>
-        <li>Technische Feinkonzeption</li>
       </ul>
     <li>Technisches Projektmanagement</li>
+      <ul>
+        <li>Software Konzeption und Architektur</li>
+        <li>Definition von Epics und User Stories (Confluence/Jira)</li>
+        <li>Technische Konzeption (CMS Projektkonzeption, Templatekonzepte)</li>
+        <li>Projektplanung</li>
+        <li>Projektlenkung</li>
+        <li>Projektcontrolling und Berichtswesen</li>
+    </ul>
     <li>Qualitätssicherung</li>
   </ul>
 
