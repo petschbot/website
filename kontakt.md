@@ -28,10 +28,6 @@ permalink: /kontakt/
 		&nbsp;
 	</p>
 	
-	<p>
-		<a href="https://twitter.com/petschbot" target="_blank">Twitter</a>
-	</p>
-
 </div>
 
 
