@@ -7,10 +7,30 @@
     <atom:link href="http://www.peter-schuster.net/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>TWT Webinare: Adobe Experience Cloud</title>
+        <description>&lt;p&gt;Im letzten Jahr habe ich zusammen mit meinen Kollegen Mareike Hanewinkel (&lt;a href=&quot;https://www.twt.de/&quot; target=&quot;_blank&quot;&gt;TWT Digital Group&lt;/a&gt;) und Klaus Mueller (&lt;a href=&quot;https://www.twt-digital-health.de/&quot; target=&quot;_blank&quot;&gt;TWT Digital Health&lt;/a&gt;) eine kleine Webinarreihe zur Adobe Experience Cloud veranstaltet. Die Mitschnitte gibt es nun als &lt;a href=&quot;https://www.youtube.com/watch?v=3gEzLH0QKs8&amp;amp;list=PLv9s6kZTPVsrZUc_F5jhGHTitjcS2aMPk&quot; target=&quot;_blank&quot;&gt;YouTube Playlist&lt;/a&gt;. &lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/3gEzLH0QKs8&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;Im &lt;a href=&quot;https://youtu.be/3gEzLH0QKs8&quot; target=&quot;_blank&quot;&gt;ersten Webinar&lt;/a&gt; zeigen Mareike und ich die Unterschiede zwischen einer Best of Breed und einer Suite Lösung auf und welche Teilkomponenten die Adobe Experience Cloud umfasst.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/vDtaQ-4kkVI&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;Im &lt;a href=&quot;https://youtu.be/vDtaQ-4kkVI&quot; target=&quot;_blank&quot;&gt;zweiten Webinar&lt;/a&gt; stellt Klaus einen spannenden Case zur Marketing Automation mit der Adobe Experience Cloud vor.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/-FfdKcpWIXk&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; encrypted-media&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;Im &lt;a href=&quot;https://youtu.be/-FfdKcpWIXk&quot; target=&quot;_blank&quot;&gt;dritten Webinar&lt;/a&gt; gehe ich auf die Herausforderungen in der digitalen Modellierung von Geschäftsprozessen ein. Anschließend demonstriere ich die Stärken von AEM Forms als Low-Code-Development-Tool zur Erstellung und Verwaltung von großen Formularmengen im Adobe Experience Manager.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 18 Apr 2018 12:00:00 +0200</pubDate>
+        <link>http://www.peter-schuster.net/2018/04/18/Adobe-Webinare/</link>
+        <guid isPermaLink="true">http://www.peter-schuster.net/2018/04/18/Adobe-Webinare/</guid>
+      </item>
+    
+      <item>
         <title>Best-of-Breed vs. Suite. Welche ist die beste Lösung?</title>
         <description>&lt;p&gt;Ein &lt;a href=&quot;https://www.twt.de/news/detail/best-of-breed-vs-suite-auf-der-suche-nach-der-richtigen-loesung-fuer-das-relaunch-projekt.html&quot; target=&quot;_blank&quot;&gt;neuer Blogbeitrag&lt;/a&gt; von mir auf der Webseite der TWT geht der Frage nach: Best of Breed oder Suite? Was ist die beste Lösung Digitalmarketinglösung für mein Relaunchprojekt?&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://www.twt.de/news/detail/best-of-breed-vs-suite-auf-der-suche-nach-der-richtigen-loesung-fuer-das-relaunch-projekt.html&quot; target=&quot;_blank&quot;&gt;TWT Blog&lt;/a&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Thu, 23 Nov 2017 17:30:00 +0100</pubDate>
         <link>http://www.peter-schuster.net/2017/11/23/Best-of-Breed-vs-Suite/</link>
@@ -194,53 +214,6 @@
         <pubDate>Wed, 18 Jun 2014 21:31:01 +0200</pubDate>
         <link>http://www.peter-schuster.net/2014/06/18/jekyll-relaunch/</link>
         <guid isPermaLink="true">http://www.peter-schuster.net/2014/06/18/jekyll-relaunch/</guid>
-      </item>
-    
-      <item>
-        <title>iOS7: Offline Websites</title>
-        <description>&lt;p&gt;Heute mal wieder ein Post aus der Reihe praktische Herausforderungen des Arbeitsalltags. Mein Team hat einen HTML5 Prototypen gebaut, inkl. aufwändiger JavaScript Effekte und optimiert für das iPad. Der Kunde wünscht nun diesen Website-Prototypen in internen Runden auch ohne Netzzugang auf dem iPad präsentieren zu können.&lt;/p&gt;
-
-&lt;p&gt;Jailbreak-Webserver fallen hier raus und ausgänglich plante ich die Website mittels Dropbox oder Documents von Readdle auf das iPad zu bringen. Beide Lösungen rendern die Site aber nicht sauber. Rund 5 gruselige Offline-Reader aus dem AppStore später kam ich über Googlen und das stets verlässliche StackOverflow auf die richtige Fährte.&lt;/p&gt;
-
-&lt;p&gt;Die HTML5 Spezifikation sieht bereits vor über sogenannte Cache Manifest Dateien dem Browser des ausspielenden Devices anzuweisen die dort definierten Teile einer Website lokal zu cachen.&lt;/p&gt;
-
-&lt;p&gt;Die Manifestdatei selber wird einfach in der Index.html referenziert.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;html manifest=&quot;cache.manifest&quot;&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Die Datei cache.manifest wiederum ist inhaltlich im einfachsten Fall auch übersichtlich und umfasst neben einem Headerteil eine Auflistung der Lokal zu cachenden Dateien, relativ zum Manifest. Wichtig dabei ist die pro Revision der Website eindeutige Versionsnummer und das die Dateidefinition keine Wildcards umfassen darf.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;CACHE MANIFEST
-# Version 201310916251
-CACHE:
-/index.html
-/images/image1.png
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Um die Generierung dieses Manifests zu erleichtern habe ich ein kleines Rubyscript geschrieben.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#!/usr/bin/ruby -w&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;year&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;day&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;hour&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;min&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sec&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;cache.manifest&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;w&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;fo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;CACHE MANIFEST&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;fo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;# Version &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;timestamp&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;fo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;CACHE:&amp;quot;&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;./**/*&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;select&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;directory?&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gsub&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/^\./&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;An sich ist damit alles vorbereitet damit der Mobile Safari auf dem iPad beim ersten Aufruf der Website eine lokale Kopie in den Cache schaufelt. Um diese Upzudaten muss der User entweder einen manuellen Reload forcieren oder die Versionsnummer in der cache.manifest inkremiert werden (was das Script über einen Zeitstempel erledigt). Um das ganze schön zu machen wurde in der Index.html noch über das passende metatag auf ein schickes Icon verwiesen und das Ganze kann dann über die entsprechende Funktion des mobile Safari als Bookmark direkt auf den Homescreen abgelegt werden.&lt;/p&gt;
-
-&lt;p&gt;Somit war nur noch eine Frage offen: Wie groß darf die Website sein. Apple schweigt sich dazu in seiner Developer Reference aus, im Netz finden sich angaben im Bezug auf iOS6 zwischen 5 und 10MB. Mittels Trial and Error konnte ich ermitteln, dass unter iOS 7 eine Website über die cache.manifest 20MB cachen darf. Geht die Summe der Dateien darüber hinaus wird interessanterweise radikal gar nichts gecacht!&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 06 Oct 2013 21:31:01 +0200</pubDate>
-        <link>http://www.peter-schuster.net/2013/10/06/ios7-offline/</link>
-        <guid isPermaLink="true">http://www.peter-schuster.net/2013/10/06/ios7-offline/</guid>
       </item>
     
   </channel>

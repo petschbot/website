@@ -8,3 +8,4 @@ Ein [neuer Blogbeitrag](https://www.twt.de/news/detail/best-of-breed-vs-suite-au
 
 
 [TWT Blog](https://www.twt.de/news/detail/best-of-breed-vs-suite-auf-der-suche-nach-der-richtigen-loesung-fuer-das-relaunch-projekt.html){:target="_blank"}
+

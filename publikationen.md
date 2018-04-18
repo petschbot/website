@@ -4,6 +4,13 @@ title: Publikationen
 permalink: /publikationen/
 ---
 
+##2017
+
+###Webinare zur Adobe Experience Cloud
+
+[TWT YouTube Playlist](/2018/04/18/Adobe-Webinare/)
+
+
 ##2016
 
 ###Service-Ökosystem für den Aftermarket aufbauen: Kundenbindung im B2B
