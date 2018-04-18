@@ -107,7 +107,7 @@ permalink: /jobs/
   <p><a href="http://www.clickworker.com" target="_blank"><img src="/images/clickworker_logo2011.png"></a></p>
   <h3>Fachbereichsverantwortlicher Technische Projektabwicklung:</h3>
    <ul>
-    <li>Projektmanagment</li>
+    <li>Projektmanagement</li>
     <li>Pre-Sales-Consulting (Machbarkeits- und Risikoanalyse)</li>
     <li>Technische Projektabwicklung</li>
     <li>API Produktmanagement</li>
